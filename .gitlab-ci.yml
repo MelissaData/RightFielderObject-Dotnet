@@ -1,0 +1,17 @@
+stages:
+  - build
+  
+buildJob:
+  stage: build
+  image: mcr.microsoft.com/dotnet/core/sdk:3.1
+  
+  script:
+    - dotnet publish -f="netcoreapp3.1" -c Release -o Artifacts MelissaDataRightFielderObjectWindowsNETExample/MelissaDataRightFielderObjectWindowsNETExample.csproj
+
+  artifacts:
+    paths:
+      - Artifacts/
+    expire_in: 1 week
+    
+  tags:
+    - docker-linux
