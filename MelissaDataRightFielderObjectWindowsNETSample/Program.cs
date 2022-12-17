@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using MelissaData;
 
-namespace MelissaDataRightFielderObjectWindowsNETExample
+namespace MelissaDataRightFielderObjectWindowsNETSample
 {
   class Program
   {
@@ -47,12 +47,11 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
           }
         }
       }
-
     }
 
     static void RunAsConsole(string license, string testInput, string dataPath)
     {
-      Console.WriteLine("\n\n===== WELCOME TO MELISSA DATA RIGHT FIELDER OBJECT WINDOWS NET EXAMPLE =====\n");
+      Console.WriteLine("\n\n===== WELCOME TO MELISSA DATA RIGHT FIELDER OBJECT WINDOWS NET SAMPLE =====\n");
 
       RightFielderObject rightFielderObject = new RightFielderObject(license, dataPath);
 
@@ -129,7 +128,6 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
         //Console.WriteLine($"\t          Unrecognized: {rightFielderObject.mdRightFielder.GetUnrecognized()}");
         Console.WriteLine($"\tResult Codes: {dataContainer.ResultCodes}");
 
-
         String[] rs = dataContainer.ResultCodes.Split(',');
         foreach (String r in rs)
           Console.WriteLine($"        {r}: {rightFielderObject.mdRightFielder.GetResultCodeDescription(r, mdRightFielder.ResultCdDescOpt.ResultCodeDescriptionLong)}");
@@ -164,7 +162,6 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
           }
         }
       }
-
       Console.WriteLine("\n============ THANK YOU FOR USING MELISSA DATA NET OBJECT ===========\n");
     }
   }
@@ -183,20 +180,7 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
       mdRightFielder.SetLicenseString(license);
       dataFilePath = dataPath;
       
-      /**
-       * DatabaseDate is the date of your data files. The data files should be one month behind the DQT release.  
-       * If you are using the 2020-10-15 release, the DatabaseDate should be 2020-09-15.
-       * 
-       * If you see a different date either download the new data files or use the Melissa Updater program to
-       * update your data files. 
-       * 
-       * If 1970-00-00 is the DatabaseDate, the Right Fielder Object was unable to reach the data files.
-       * 
-       * ---------------------------READING THIS MAY SAVE YOU HOURS OF YOUR TIME-------------------------------
-       * If the DatabaseDate is not consistent with the data files and your are having issues getting results
-       * using mdRightFielder, it is likely a license string issue and yours may have expired.
-       */
-
+      // If you see a different date than expected, check your license string and either download the new data files or use the Melissa Updater program to update your data files.  
       mdRightFielder.SetPathToRightFielderFiles(dataFilePath);
       mdRightFielder.ProgramStatus pStatus = mdRightFielder.InitializeDataFiles();
 
@@ -211,7 +195,7 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
       Console.WriteLine($"              Expiration Date: {mdRightFielder.GetLicenseExpirationDate()}");
 
       /**
-       * This number should match with file properties of the mdRightFielder.dll File Version.
+       * This number should match with file properties of the Melissa Data Object binary file.
        * If TEST appears with the build number, there may be a license key issue.
        */
       Console.WriteLine($"               Object Version: {mdRightFielder.GetBuildNumber()}\n");
@@ -220,7 +204,6 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
     // This will call the lookup function to process the input as well as generate the result codes
     public void ExecuteObjectAndResultCodes(ref DataContainer data)
     {
-
       // These are the configuarble pieces of the right fielder object. We are setting what kind of information we want to be looked up
       // SetUserPattern Method - Ex. Social Security Number
 
@@ -230,8 +213,7 @@ namespace MelissaDataRightFielderObjectWindowsNETExample
 
       // ResultsCodes explain any issues phone object has with the object.
       // List of result codes for Phone object
-      // https://wiki.melissadata.com/index.php?title=Result_Code_Details#RightFielder_Object
-
+      // https://wiki.melissadata.com/?title=Result_Code_Details#RightFielder_Object
     }
   }
 
