@@ -51,7 +51,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
 
     static void RunAsConsole(string license, string testInput, string dataPath)
     {
-      Console.WriteLine("\n\n===== WELCOME TO MELISSA DATA RIGHT FIELDER OBJECT WINDOWS NET SAMPLE =====\n");
+      Console.WriteLine("\n\n==== WELCOME TO MELISSA DATA RIGHT FIELDER OBJECT WINDOWS NET SAMPLE =====\n");
 
       RightFielderObject rightFielderObject = new RightFielderObject(license, dataPath);
 
@@ -81,7 +81,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
         }
 
         // Print user input
-        Console.WriteLine("\n============================== INPUTS ==============================\n");
+        Console.WriteLine("\n================================= INPUTS =================================\n");
         Console.WriteLine($"\tRight Fielder Input: {dataContainer.Input}");
         //Console.WriteLine($"\t               Address: {dataContainer.Address}");
         //Console.WriteLine($"\t          CityStateZip: {dataContainer.CityStateZip}");
@@ -97,7 +97,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
         rightFielderObject.ExecuteObjectAndResultCodes(ref dataContainer);
 
         // Print output
-        Console.WriteLine("\n============================== OUTPUT ==============================\n");
+        Console.WriteLine("\n================================= OUTPUT =================================\n");
         Console.WriteLine("\n\tRightFielder Object Information:");
         //Console.WriteLine($"\t   Right Fielder Input: {dataContainer.Input}");
         Console.WriteLine($"\t          AddressLine1: {rightFielderObject.mdRightFielder.GetAddress()}");
@@ -126,7 +126,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
         //Console.WriteLine($"\t             UserField: {rightFielderObject.mdRightFielder.GetUserField("SSN")}");
         //rightFielderObject.mdRightFielder.GetUnrecognizedNext();
         //Console.WriteLine($"\t          Unrecognized: {rightFielderObject.mdRightFielder.GetUnrecognized()}");
-        Console.WriteLine($"\tResult Codes: {dataContainer.ResultCodes}");
+        Console.WriteLine($"\t          Result Codes: {dataContainer.ResultCodes}");
 
         String[] rs = dataContainer.ResultCodes.Split(',');
         foreach (String r in rs)
@@ -162,7 +162,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
           }
         }
       }
-      Console.WriteLine("\n============ THANK YOU FOR USING MELISSA DATA NET OBJECT ===========\n");
+      Console.WriteLine("\n================ THANK YOU FOR USING MELISSA DATA NET OBJECT ===============\n");
     }
   }
 

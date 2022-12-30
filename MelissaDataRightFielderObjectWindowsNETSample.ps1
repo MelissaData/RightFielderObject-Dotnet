@@ -150,9 +150,10 @@ Write-Host "All file(s) have been downloaded/updated!"
 # Build project
 Write-Host "`n=========================== BUILD PROJECT =========================="
 
-# Target frameworks net6.0, net5.0 and netcoreapp3.1
+# Target frameworks net7.0, net6.0, net5.0 and netcoreapp3.1
 # Please comment out the version that you don't want to use and uncomment the one that you do want to use
-dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
+dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
+#dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
 #dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
 #dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
 
