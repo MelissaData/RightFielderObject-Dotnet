@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using MelissaData;
 
-namespace MelissaDataRightFielderObjectWindowsNETSample
+namespace MelissaRightFielderObjectWindowsDotnet
 {
   class Program
   {
@@ -51,7 +51,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
 
     static void RunAsConsole(string license, string testInput, string dataPath)
     {
-      Console.WriteLine("\n\n==== WELCOME TO MELISSA DATA RIGHT FIELDER OBJECT WINDOWS NET SAMPLE =====\n");
+      Console.WriteLine("\n\n========= WELCOME TO MELISSA RIGHT FIELDER OBJECT WINDOWS DOTNET =========\n");
 
       RightFielderObject rightFielderObject = new RightFielderObject(license, dataPath);
 
@@ -83,15 +83,6 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
         // Print user input
         Console.WriteLine("\n================================= INPUTS =================================\n");
         Console.WriteLine($"\tRight Fielder Input: {dataContainer.Input}");
-        //Console.WriteLine($"\t               Address: {dataContainer.Address}");
-        //Console.WriteLine($"\t          CityStateZip: {dataContainer.CityStateZip}");
-        //Console.WriteLine($"\t               Company: {dataContainer.Company}");
-        //Console.WriteLine($"\t               Country: {dataContainer.Country}");
-        //Console.WriteLine($"\t            Department: {dataContainer.Department}");
-        //Console.WriteLine($"\t                 Email: {dataContainer.Email}");
-        //Console.WriteLine($"\t              FullName: {dataContainer.FullName}");
-        //Console.WriteLine($"\t                 Phone: {dataContainer.Phone}");
-        //Console.WriteLine($"\t                   Url: {dataContainer.Url}");
 
         // Execute Right Fielder Object
         rightFielderObject.ExecuteObjectAndResultCodes(ref dataContainer);
@@ -162,16 +153,16 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
           }
         }
       }
-      Console.WriteLine("\n================ THANK YOU FOR USING MELISSA DATA NET OBJECT ===============\n");
+      Console.WriteLine("\n================ THANK YOU FOR USING MELISSA DOTNET OBJECT ===============\n");
     }
   }
 
   class RightFielderObject
   {
-    // Path to right fielder object data files (.dat, etc)
+    // Path to Right Fielder Object data files (.dat, etc)
     string dataFilePath;
 
-    // Create instance of Melissa Data Right Fielder Object
+    // Create instance of Melissa Right Fielder Object
     public mdRightFielder mdRightFielder = new mdRightFielder();
 
     public RightFielderObject(string license, string dataPath)
@@ -195,7 +186,7 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
       Console.WriteLine($"              Expiration Date: {mdRightFielder.GetLicenseExpirationDate()}");
 
       /**
-       * This number should match with file properties of the Melissa Data Object binary file.
+       * This number should match with file properties of the Melissa Object binary file.
        * If TEST appears with the build number, there may be a license key issue.
        */
       Console.WriteLine($"               Object Version: {mdRightFielder.GetBuildNumber()}\n");
@@ -204,15 +195,15 @@ namespace MelissaDataRightFielderObjectWindowsNETSample
     // This will call the lookup function to process the input as well as generate the result codes
     public void ExecuteObjectAndResultCodes(ref DataContainer data)
     {
-      // These are the configuarble pieces of the right fielder object. We are setting what kind of information we want to be looked up
+      // These are the configuarble pieces of the Right Fielder Object. We are setting what kind of information we want to be looked up
       // SetUserPattern Method - Ex. Social Security Number
 
       //mdRightFielder.SetUserPattern("SSN", "[0-9]{3}-[0-9]{2}-[0-9]{4}");
       mdRightFielder.Parse(data.Input);
       data.ResultCodes = mdRightFielder.GetResults();
 
-      // ResultsCodes explain any issues phone object has with the object.
-      // List of result codes for Phone object
+      // ResultsCodes explain any issues Right Fielder Object has with the object.
+      // List of result codes for Right Fielder Object
       // https://wiki.melissadata.com/?title=Result_Code_Details#RightFielder_Object
     }
   }

@@ -6,7 +6,7 @@ buildJob:
   image: mcr.microsoft.com/dotnet/sdk:7.0
   
   script:
-    - dotnet publish -f="net7.0" -c Release -o Artifacts MelissaDataRightFielderObjectWindowsNETSample/MelissaDataRightFielderObjectWindowsNETSample.csproj
+    - dotnet publish -f="net7.0" -c Release -o Artifacts MelissaRightFielderObjectWindowsDotnet/MelissaRightFielderObjectWindowsDotnet.csproj
 
   artifacts:
     paths:

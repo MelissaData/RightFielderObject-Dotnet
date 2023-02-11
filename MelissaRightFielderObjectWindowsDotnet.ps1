@@ -1,5 +1,5 @@
-# Name:    MelissaDataRightFielderObjectWindowsNET
-# Purpose: Use the MelissaUpdater to make the MelissaDataRightFielderObjectWindowsNET sample usable
+# Name:    MelissaRightFielderObjectWindowsDotnet
+# Purpose: Use the MelissaUpdater to make the MelissaRightFielderObjectWindowsDotnet code usable
 
 ######################### Parameters ##########################
 
@@ -25,7 +25,7 @@ $ProductName = "RF_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataRightFielderObjectWindowsNETSample"
+$ProjectPath = "$CurrentPath\MelissaRightFielderObjectWindowsDotnet"
 $DataPath = "$ProjectPath\Data"
 $BuildPath = "$ProjectPath\Build"
 
@@ -108,7 +108,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n=============== Sample of Melissa Data Right Fielder Object ===============`n                    [ .NET | Windows | 64BIT ]`n"
+Write-Host "`n=================== Melissa Right Fielder Object ===================`n                    [ .NET | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license)) {
@@ -135,7 +135,7 @@ DownloadDataFiles -license $License      # comment out this line if using DQS Re
 # Download dll(s)
 DownloadDlls -license $License
 
-# Check if dll(s) have been downloaded Exit script if missing
+# Check if dll(s) have been downloaded. Exit script if missing
 $DLLsAreDownloaded = CheckDLLs
 
 if (!$DLLsAreDownloaded) {
@@ -146,21 +146,21 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated!"
 
-# Start sample
+# Start program
 # Build project
 Write-Host "`n=========================== BUILD PROJECT =========================="
 
 # Target frameworks net7.0, net6.0, net5.0 and netcoreapp3.1
 # Please comment out the version that you don't want to use and uncomment the one that you do want to use
-dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
-#dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
-#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
-#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaDataRightFielderObjectWindowsNETSample\MelissaDataRightFielderObjectWindowsNETSample.csproj
+dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
+#dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
+#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
+#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
 
 # Run project
 if ([string]::IsNullOrEmpty($rfinput)) {
-  dotnet $BuildPath\MelissaDataRightFielderObjectWindowsNETSample.dll --license $License  --dataPath $DataPath
+  dotnet $BuildPath\MelissaRightFielderObjectWindowsDotnet.dll --license $License  --dataPath $DataPath
 }
 else {
-  dotnet $BuildPath\MelissaDataRightFielderObjectWindowsNETSample.dll --license $License  --dataPath $DataPath --rfinput $rfinput
+  dotnet $BuildPath\MelissaRightFielderObjectWindowsDotnet.dll --license $License  --dataPath $DataPath --rfinput $rfinput
 }
