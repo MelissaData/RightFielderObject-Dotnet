@@ -18,7 +18,7 @@ class DLLConfig {
 
 ######################### Config ###########################
 
-$RELEASE_VERSION = '2023.04'
+$RELEASE_VERSION = '2023.05'
 $ProductName = "RF_DATA"
 
 # Uses the location of the .ps1 file 
