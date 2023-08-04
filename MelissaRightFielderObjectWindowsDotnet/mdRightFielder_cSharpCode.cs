@@ -26,112 +26,112 @@ namespace MelissaData {
 
 		[SuppressUnmanagedCodeSecurity]
 		private class mdRightFielderUnmanaged {
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderCreate", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderCreate", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderCreate();
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderDestroy", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderDestroy", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderDestroy(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetLicenseString", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderSetLicenseString(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetPathToRightFielderFiles", CallingConvention = CallingConvention.Cdecl)]
-			public static extern void mdRightFielderSetPathToRightFielderFiles(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetBuildNumber", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetLicenseString", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderSetLicenseString(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetPathToRightFielderFiles", CallingConvention = CallingConvention.Cdecl)]
+			public static extern void mdRightFielderSetPathToRightFielderFiles(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetBuildNumber", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetBuildNumber(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetDatabaseDate", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetDatabaseDate", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetDatabaseDate(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetLicenseExpirationDate", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetLicenseExpirationDate", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetLicenseExpirationDate(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderInitializeDataFiles", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderInitializeDataFiles", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderInitializeDataFiles(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetInitializeErrorString", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetInitializeErrorString", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetInitializeErrorString(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetDelimiter", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetDelimiter", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetDelimiter(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptFullName", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptFullName", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptFullName(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptDepartment", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptDepartment", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptDepartment(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptCompany", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptCompany", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptCompany(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptAddress", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptAddress", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptAddress(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptCityStateZip", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptCityStateZip", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptCityStateZip(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptCountry", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptCountry", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptCountry(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptPhone", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptPhone", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptPhone(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptEmail", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptEmail", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptEmail(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetAcceptURL", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetAcceptURL", CallingConvention = CallingConvention.Cdecl)]
 			public static extern void mdRightFielderSetAcceptURL(IntPtr i, Int32 p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetUserPattern", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderSetUserPattern(IntPtr i, IntPtr p1, IntPtr p2);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderParse", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderParse(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderParseFreeForm", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderParseFreeForm(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderParseFielded", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderParseFielded(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetFullName", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetUserPattern", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderSetUserPattern(IntPtr i, string p1, string p2);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderParse", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderParse(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderParseFreeForm", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderParseFreeForm(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderParseFielded", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderParseFielded(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetFullName", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetFullName(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetFullNameNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetFullNameNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetFullNameNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetDepartment", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetDepartment", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetDepartment(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetDepartmentNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetDepartmentNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetDepartmentNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetCompany", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetCompany", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetCompany(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetCompanyNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetCompanyNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetCompanyNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetAddress", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetAddress", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetAddress(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetAddress2", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetAddress2", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetAddress2(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetAddress3", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetAddress3", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetAddress3(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetCity", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetCity", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetCity(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetState", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetState", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetState(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetPostalCode", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetPostalCode", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetPostalCode(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetCountry", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetCountry", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetCountry(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetLastLine", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetLastLine", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetLastLine(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetPhone", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetPhone", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetPhone(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetPhoneNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetPhoneNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetPhoneNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetPhoneType", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetPhoneType", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetPhoneType(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetPhoneTypeNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetPhoneTypeNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetPhoneTypeNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetEmail", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetEmail", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetEmail(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetEmailNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetEmailNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetEmailNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetURL", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetURL", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetURL(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetURLNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetURLNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetURLNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetUserField", CallingConvention = CallingConvention.Cdecl)]
-			public static extern IntPtr mdRightFielderGetUserField(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetUserFieldNext", CallingConvention = CallingConvention.Cdecl)]
-			public static extern Int32 mdRightFielderGetUserFieldNext(IntPtr i, IntPtr p1);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetUnrecognized", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetUserField", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdRightFielderGetUserField(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetUserFieldNext", CallingConvention = CallingConvention.Cdecl)]
+			public static extern Int32 mdRightFielderGetUserFieldNext(IntPtr i, string p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetUnrecognized", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetUnrecognized(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetUnrecognizedNext", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetUnrecognizedNext", CallingConvention = CallingConvention.Cdecl)]
 			public static extern Int32 mdRightFielderGetUnrecognizedNext(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetResults", CallingConvention = CallingConvention.Cdecl)]
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetResults", CallingConvention = CallingConvention.Cdecl)]
 			public static extern IntPtr mdRightFielderGetResults(IntPtr i);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetResultCodeDescription", CallingConvention = CallingConvention.Cdecl)]
-			public static extern IntPtr mdRightFielderGetResultCodeDescription(IntPtr i, IntPtr resultCode, Int32 opt);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderSetReserved", CallingConvention = CallingConvention.Cdecl)]
-			public static extern void mdRightFielderSetReserved(IntPtr i, IntPtr p1, IntPtr p2);
-			[DllImport("mdRightFielder", EntryPoint = "mdRightFielderGetReserved", CallingConvention = CallingConvention.Cdecl)]
-			public static extern IntPtr mdRightFielderGetReserved(IntPtr i, IntPtr p1);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetResultCodeDescription", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdRightFielderGetResultCodeDescription(IntPtr i, string resultCode, Int32 opt);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderSetReserved", CallingConvention = CallingConvention.Cdecl)]
+			public static extern void mdRightFielderSetReserved(IntPtr i, string p1, string p2);
+			[DllImport("mdRightFielder.dll", EntryPoint = "mdRightFielderGetReserved", CallingConvention = CallingConvention.Cdecl)]
+			public static extern IntPtr mdRightFielderGetReserved(IntPtr i, string p1);
 		}
 
 		public mdRightFielder() {
@@ -150,25 +150,23 @@ namespace MelissaData {
 		}
 
 		public bool SetLicenseString(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderSetLicenseString(i, u_p1.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderSetLicenseString(i, p1) != 0);
 		}
 
 		public void SetPathToRightFielderFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdRightFielderUnmanaged.mdRightFielderSetPathToRightFielderFiles(i, u_p1.GetUtf8Ptr());
+			mdRightFielderUnmanaged.mdRightFielderSetPathToRightFielderFiles(i, p1);
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetBuildNumber(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetBuildNumber(i));
 		}
 
 		public string GetDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetDatabaseDate(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetDatabaseDate(i));
 		}
 
 		public string GetLicenseExpirationDate() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetLicenseExpirationDate(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetLicenseExpirationDate(i));
 		}
 
 		public ProgramStatus InitializeDataFiles() {
@@ -176,7 +174,7 @@ namespace MelissaData {
 		}
 
 		public string GetInitializeErrorString() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetInitializeErrorString(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetInitializeErrorString(i));
 		}
 
 		public void SetDelimiter(Delimiter p1) {
@@ -220,28 +218,23 @@ namespace MelissaData {
 		}
 
 		public bool SetUserPattern(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return (mdRightFielderUnmanaged.mdRightFielderSetUserPattern(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderSetUserPattern(i, p1, p2) != 0);
 		}
 
 		public bool Parse(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParse(i, u_p1.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderParse(i, p1) != 0);
 		}
 
 		public bool ParseFreeForm(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParseFreeForm(i, u_p1.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderParseFreeForm(i, p1) != 0);
 		}
 
 		public bool ParseFielded(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParseFielded(i, u_p1.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderParseFielded(i, p1) != 0);
 		}
 
 		public string GetFullName() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetFullName(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetFullName(i));
 		}
 
 		public bool GetFullNameNext() {
@@ -249,7 +242,7 @@ namespace MelissaData {
 		}
 
 		public string GetDepartment() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetDepartment(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetDepartment(i));
 		}
 
 		public bool GetDepartmentNext() {
@@ -257,7 +250,7 @@ namespace MelissaData {
 		}
 
 		public string GetCompany() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCompany(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetCompany(i));
 		}
 
 		public bool GetCompanyNext() {
@@ -265,39 +258,39 @@ namespace MelissaData {
 		}
 
 		public string GetAddress() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetAddress(i));
 		}
 
 		public string GetAddress2() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress2(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetAddress2(i));
 		}
 
 		public string GetAddress3() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress3(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetAddress3(i));
 		}
 
 		public string GetCity() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCity(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetCity(i));
 		}
 
 		public string GetState() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetState(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetState(i));
 		}
 
 		public string GetPostalCode() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPostalCode(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetPostalCode(i));
 		}
 
 		public string GetCountry() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCountry(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetCountry(i));
 		}
 
 		public string GetLastLine() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetLastLine(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetLastLine(i));
 		}
 
 		public string GetPhone() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPhone(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetPhone(i));
 		}
 
 		public bool GetPhoneNext() {
@@ -305,7 +298,7 @@ namespace MelissaData {
 		}
 
 		public string GetPhoneType() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPhoneType(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetPhoneType(i));
 		}
 
 		public bool GetPhoneTypeNext() {
@@ -313,7 +306,7 @@ namespace MelissaData {
 		}
 
 		public string GetEmail() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetEmail(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetEmail(i));
 		}
 
 		public bool GetEmailNext() {
@@ -321,7 +314,7 @@ namespace MelissaData {
 		}
 
 		public string GetURL() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetURL(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetURL(i));
 		}
 
 		public bool GetURLNext() {
@@ -329,17 +322,15 @@ namespace MelissaData {
 		}
 
 		public string GetUserField(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetUserField(i, u_p1.GetUtf8Ptr()));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetUserField(i, p1));
 		}
 
 		public bool GetUserFieldNext(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderGetUserFieldNext(i, u_p1.GetUtf8Ptr()) != 0);
+			return (mdRightFielderUnmanaged.mdRightFielderGetUserFieldNext(i, p1) != 0);
 		}
 
 		public string GetUnrecognized() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetUnrecognized(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetUnrecognized(i));
 		}
 
 		public bool GetUnrecognizedNext() {
@@ -347,28 +338,23 @@ namespace MelissaData {
 		}
 
 		public string GetResults() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResults(i));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetResults(i));
 		}
 
 		public string GetResultCodeDescription(string resultCode, ResultCdDescOpt opt) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)opt));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, resultCode, (int)opt));
 		}
 
 		public string GetResultCodeDescription(string resultCode) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)ResultCdDescOpt.ResultCodeDescriptionLong));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, resultCode, (int)ResultCdDescOpt.ResultCodeDescriptionLong));
 		}
 
 		public void SetReserved(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			mdRightFielderUnmanaged.mdRightFielderSetReserved(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr());
+			mdRightFielderUnmanaged.mdRightFielderSetReserved(i, p1, p2);
 		}
 
 		public string GetReserved(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetReserved(i, u_p1.GetUtf8Ptr()));
+			return Marshal.PtrToStringAnsi(mdRightFielderUnmanaged.mdRightFielderGetReserved(i, p1));
 		}
 
 		private class Utf8String : IDisposable {
