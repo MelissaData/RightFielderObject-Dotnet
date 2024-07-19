@@ -150,25 +150,25 @@ namespace MelissaData {
 		}
 
 		public bool SetLicenseString(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderSetLicenseString(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdRightFielderUnmanaged.mdRightFielderSetLicenseString(i, u_p1.GetPtr()) != 0);
 		}
 
 		public void SetPathToRightFielderFiles(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			mdRightFielderUnmanaged.mdRightFielderSetPathToRightFielderFiles(i, u_p1.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			mdRightFielderUnmanaged.mdRightFielderSetPathToRightFielderFiles(i, u_p1.GetPtr());
 		}
 
 		public string GetBuildNumber() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetBuildNumber(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetBuildNumber(i));
 		}
 
 		public string GetDatabaseDate() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetDatabaseDate(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetDatabaseDate(i));
 		}
 
 		public string GetLicenseExpirationDate() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetLicenseExpirationDate(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetLicenseExpirationDate(i));
 		}
 
 		public ProgramStatus InitializeDataFiles() {
@@ -176,7 +176,7 @@ namespace MelissaData {
 		}
 
 		public string GetInitializeErrorString() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetInitializeErrorString(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetInitializeErrorString(i));
 		}
 
 		public void SetDelimiter(Delimiter p1) {
@@ -220,28 +220,28 @@ namespace MelissaData {
 		}
 
 		public bool SetUserPattern(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			return (mdRightFielderUnmanaged.mdRightFielderSetUserPattern(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			return (mdRightFielderUnmanaged.mdRightFielderSetUserPattern(i, u_p1.GetPtr(), u_p2.GetPtr()) != 0);
 		}
 
 		public bool Parse(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParse(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdRightFielderUnmanaged.mdRightFielderParse(i, u_p1.GetPtr()) != 0);
 		}
 
 		public bool ParseFreeForm(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParseFreeForm(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdRightFielderUnmanaged.mdRightFielderParseFreeForm(i, u_p1.GetPtr()) != 0);
 		}
 
 		public bool ParseFielded(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderParseFielded(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdRightFielderUnmanaged.mdRightFielderParseFielded(i, u_p1.GetPtr()) != 0);
 		}
 
 		public string GetFullName() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetFullName(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetFullName(i));
 		}
 
 		public bool GetFullNameNext() {
@@ -249,7 +249,7 @@ namespace MelissaData {
 		}
 
 		public string GetDepartment() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetDepartment(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetDepartment(i));
 		}
 
 		public bool GetDepartmentNext() {
@@ -257,7 +257,7 @@ namespace MelissaData {
 		}
 
 		public string GetCompany() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCompany(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetCompany(i));
 		}
 
 		public bool GetCompanyNext() {
@@ -265,39 +265,39 @@ namespace MelissaData {
 		}
 
 		public string GetAddress() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetAddress(i));
 		}
 
 		public string GetAddress2() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress2(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetAddress2(i));
 		}
 
 		public string GetAddress3() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetAddress3(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetAddress3(i));
 		}
 
 		public string GetCity() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCity(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetCity(i));
 		}
 
 		public string GetState() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetState(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetState(i));
 		}
 
 		public string GetPostalCode() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPostalCode(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetPostalCode(i));
 		}
 
 		public string GetCountry() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetCountry(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetCountry(i));
 		}
 
 		public string GetLastLine() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetLastLine(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetLastLine(i));
 		}
 
 		public string GetPhone() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPhone(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetPhone(i));
 		}
 
 		public bool GetPhoneNext() {
@@ -305,7 +305,7 @@ namespace MelissaData {
 		}
 
 		public string GetPhoneType() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetPhoneType(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetPhoneType(i));
 		}
 
 		public bool GetPhoneTypeNext() {
@@ -313,7 +313,7 @@ namespace MelissaData {
 		}
 
 		public string GetEmail() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetEmail(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetEmail(i));
 		}
 
 		public bool GetEmailNext() {
@@ -321,7 +321,7 @@ namespace MelissaData {
 		}
 
 		public string GetURL() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetURL(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetURL(i));
 		}
 
 		public bool GetURLNext() {
@@ -329,17 +329,17 @@ namespace MelissaData {
 		}
 
 		public string GetUserField(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetUserField(i, u_p1.GetUtf8Ptr()));
+			EncodedString u_p1 = new EncodedString(p1);
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetUserField(i, u_p1.GetPtr()));
 		}
 
 		public bool GetUserFieldNext(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return (mdRightFielderUnmanaged.mdRightFielderGetUserFieldNext(i, u_p1.GetUtf8Ptr()) != 0);
+			EncodedString u_p1 = new EncodedString(p1);
+			return (mdRightFielderUnmanaged.mdRightFielderGetUserFieldNext(i, u_p1.GetPtr()) != 0);
 		}
 
 		public string GetUnrecognized() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetUnrecognized(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetUnrecognized(i));
 		}
 
 		public bool GetUnrecognizedNext() {
@@ -347,59 +347,60 @@ namespace MelissaData {
 		}
 
 		public string GetResults() {
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResults(i));
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetResults(i));
 		}
 
 		public string GetResultCodeDescription(string resultCode, ResultCdDescOpt opt) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)opt));
+			EncodedString u_resultCode = new EncodedString(resultCode);
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetPtr(), (int)opt));
 		}
 
 		public string GetResultCodeDescription(string resultCode) {
-			Utf8String u_resultCode = new Utf8String(resultCode);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetUtf8Ptr(), (int)ResultCdDescOpt.ResultCodeDescriptionLong));
+			EncodedString u_resultCode = new EncodedString(resultCode);
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetResultCodeDescription(i, u_resultCode.GetPtr(), (int)ResultCdDescOpt.ResultCodeDescriptionLong));
 		}
 
 		public void SetReserved(string p1, string p2) {
-			Utf8String u_p1 = new Utf8String(p1);
-			Utf8String u_p2 = new Utf8String(p2);
-			mdRightFielderUnmanaged.mdRightFielderSetReserved(i, u_p1.GetUtf8Ptr(), u_p2.GetUtf8Ptr());
+			EncodedString u_p1 = new EncodedString(p1);
+			EncodedString u_p2 = new EncodedString(p2);
+			mdRightFielderUnmanaged.mdRightFielderSetReserved(i, u_p1.GetPtr(), u_p2.GetPtr());
 		}
 
 		public string GetReserved(string p1) {
-			Utf8String u_p1 = new Utf8String(p1);
-			return Utf8String.GetUnicodeString(mdRightFielderUnmanaged.mdRightFielderGetReserved(i, u_p1.GetUtf8Ptr()));
+			EncodedString u_p1 = new EncodedString(p1);
+			return EncodedString.GetEncodedString(mdRightFielderUnmanaged.mdRightFielderGetReserved(i, u_p1.GetPtr()));
 		}
 
-		private class Utf8String : IDisposable {
-			private IntPtr utf8String = IntPtr.Zero;
+		private class EncodedString : IDisposable {
+			private IntPtr encodedString = IntPtr.Zero;
+			private static Encoding encoding = Encoding.UTF8;
 
-			public Utf8String(string str) {
+			public EncodedString(string str) {
 				if (str == null)
 					str = "";
-				byte[] buffer = Encoding.UTF8.GetBytes(str);
+				byte[] buffer = encoding.GetBytes(str);
 				Array.Resize(ref buffer, buffer.Length + 1);
 				buffer[buffer.Length - 1] = 0;
-				utf8String = Marshal.AllocHGlobal(buffer.Length);
-				Marshal.Copy(buffer, 0, utf8String, buffer.Length);
+				encodedString = Marshal.AllocHGlobal(buffer.Length);
+				Marshal.Copy(buffer, 0, encodedString, buffer.Length);
 			}
 
-			~Utf8String() {
+			~EncodedString() {
 				Dispose();
 			}
 
 			public virtual void Dispose() {
 				lock (this) {
-					Marshal.FreeHGlobal(utf8String);
+					Marshal.FreeHGlobal(encodedString);
 					GC.SuppressFinalize(this);
 				}
 			}
 
-			public IntPtr GetUtf8Ptr() {
-				return utf8String;
+			public IntPtr GetPtr() {
+				return encodedString;
 			}
 
-			public static string GetUnicodeString(IntPtr ptr) {
+			public static string GetEncodedString(IntPtr ptr) {
 				if (ptr == IntPtr.Zero)
 					return "";
 				int len = 0;
@@ -409,7 +410,7 @@ namespace MelissaData {
 					return "";
 				byte[] buffer = new byte[len];
 				Marshal.Copy(ptr, buffer, 0, len);
-				return Encoding.UTF8.GetString(buffer);
+				return encoding.GetString(buffer);
 			}
 		}
 	}
