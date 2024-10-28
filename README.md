@@ -25,7 +25,7 @@ And return
 
 ## Tested Environments
 - Windows 10 64-bit .NET 7.0, Powershell 5.1
-- Melissa data files for 2024-Q3
+- Melissa data files for 2024-Q4
 
 ## Required File(s) and Programs
 
@@ -76,8 +76,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-$ git clone https://github.com/MelissaData/RightFielderObject-Dotnet
-$ cd RightFielderObject-Dotnet
+git clone https://github.com/MelissaData/RightFielderObject-Dotnet
+cd RightFielderObject-Dotnet
 ```
 
 #### Set up Melissa Updater 
@@ -111,25 +111,25 @@ When you have modified the script to match your data location, let's run the scr
 There are two modes:
 - Interactive 
 
-	The script will prompt the user for the right fielder input, then use the provided right fielder input to test the Right Fielder Object. For example:
-	```
-	$ .\MelissaRightFielderObjectWindowsDotnet.ps1
-	```
+    The script will prompt the user for the right fielder input, then use the provided right fielder input to test the Right Fielder Object. For example:
+    ```
+    .\MelissaRightFielderObjectWindowsDotnet.ps1
+    ```
     For quiet mode:
     ```
-    $ .\MelissaRightFielderObjectWindowsDotnet.ps1 -quiet
+    .\MelissaRightFielderObjectWindowsDotnet.ps1 -quiet
     ```
 - Command Line 
 
-	You can pass a right fielder input in ```-rfinput``` parameter and a license string in ```-license``` parameter to test the Right Fielder Object. For example:
-	```
-    $ .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688"
-	$ .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -license "<your_license_string>" 
+    You can pass a right fielder input in ```-rfinput``` parameter and a license string in ```-license``` parameter to test the Right Fielder Object. For example:
     ```
-	For quiet mode:
+    .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688"
+    .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -license "<your_license_string>" 
     ```
-    $ .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -quiet
-	$ .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -license "<your_license_string>" -quiet
+    For quiet mode:
+    ```
+    .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -quiet
+    .\MelissaRightFielderObjectWindowsDotnet.ps1 -rfinput "22382 Avenida Empresa, Rancho Santa Margarita, CA 92688" -license "<your_license_string>" -quiet
     ```
 This is the expected output from a successful setup for interactive mode:
 
