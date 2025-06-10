@@ -207,7 +207,7 @@ Write-Host "All file(s) have been downloaded/updated!"
 # Build project
 Write-Host "`n=========================== BUILD PROJECT =========================="
 
-dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
+dotnet publish -f="net8.0" -c Release -o $BuildPath MelissaRightFielderObjectWindowsDotnet\MelissaRightFielderObjectWindowsDotnet.csproj
 
 # Run project
 if ([string]::IsNullOrEmpty($rfinput)) {

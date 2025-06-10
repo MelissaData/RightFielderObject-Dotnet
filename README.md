@@ -24,7 +24,7 @@ And return
 - Result Codes
 
 ## Tested Environments
-- Windows 10 64-bit .NET 7.0, Powershell 5.1
+- Windows 10 64-bit .NET 8.0, Powershell 5.1
 - Melissa data files for 2025-Q2
 
 ## Required File(s) and Programs
@@ -41,26 +41,24 @@ This is the c++ code of the Melissa Object.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-#### Install the Dotnet Core SDK
-Before starting, make sure that the .NET 7.0 SDK has been correctly installed on your machine (If you have Visual Studio installed, you most likely have it already). If you are unsure, you can check by opening a command prompt window and typing the following:
+#### Install .NET SDK
+Before starting, make sure that .NET SDK has been correctly installed on your machine (If you have Visual Studio installed, you most likely have it already). If you are unsure, you can check by opening a command prompt window and typing the following:
 
 `dotnet --list-sdks`
 
-If the .NET 7.0 SDK is already installed, you should see it in the following list:
+If .NET SDK is already installed, you should see it in the following list:
 
 ![alt text](/screenshots/dotnet_output.PNG)
 
-As long as the above list contains version `7.0.xxx` (underlined in red), then you can skip to the next step. If your list does not contain version 7.0, or you get any kind of error message, then you will need to download and install the .NET 7.0 SDK from the Microsoft website.
-
 To download, follow this link: https://dotnet.microsoft.com/en-us/download/dotnet
 
-Select `.NET 7.0` and you will be navigated to the download page.
+Select the desired .NET SDK version and you will be navigated to the download page.
 
 Click and download the `x64` SDK installer for your operating system.
 
-(IMPORTANT: Make sure you download the SDK, NOT the runtime. The SDK contains both the runtime as well as the tools needed to build the project.)
+(IMPORTANT: Make sure you download the SDK, NOT the runtime. the SDK contains both the runtime as well as the tools needed to build the project.)
 
-![alt text](/screenshots/net7.png)
+![alt text](/screenshots/net.png)
 
 Once clicked, your web browser will begin downloading an installer for the SDK. Run the installer and follow all of the prompts to complete the installation (your computer may ask you to restart before you can continue). Once all of that is done, you should be able to verify that the SDK is installed with the `dotnet --list-sdks` command.
 
