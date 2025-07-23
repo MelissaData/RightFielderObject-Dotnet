@@ -25,7 +25,7 @@ And return
 
 ## Tested Environments
 - Windows 10 64-bit .NET 8.0, Powershell 5.1
-- Melissa data files for 2025-Q2
+- Melissa data files for 2025-Q3
 
 ## Required File(s) and Programs
 
