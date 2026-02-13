@@ -5,7 +5,7 @@ This code showcases the Melissa Right Fielder Object using C#.
 
 Please feel free to copy or embed this code to your own project. Happy coding!
 
-For the latest Melissa Right Fielder Object release notes, please visit: https://releasenotes.melissa.com/on-premise-api/rightfielder-object/
+To view the latest Melissa Right Fielder Object release notes or to subscribe to product notifications, please visit: https://releasenotes.melissa.com/on-premise-api/rightfielder-object/
 
 For further details, please visit: https://docs.melissa.com/on-premise-api/rightfielder-object/rightfielder-object-quickstart.html
 
@@ -24,8 +24,8 @@ And return
 - Result Codes
 
 ## Tested Environments
-- Windows 10 64-bit .NET 8.0, Powershell 5.1
-- Melissa data files for 2025-Q4
+- Windows 11 64-bit .NET 8.0, Powershell 5.1
+- Melissa data files for 2026-Q1
 
 ## Required File(s) and Programs
 
@@ -48,7 +48,7 @@ Before starting, make sure that .NET SDK has been correctly installed on your ma
 
 If .NET SDK is already installed, you should see it in the following list:
 
-![alt text](/screenshots/dotnet_output.PNG)
+![alt text](/screenshots/dotnet_output.png)
 
 To download, follow this link: https://dotnet.microsoft.com/en-us/download/dotnet
 
@@ -74,8 +74,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-git clone https://github.com/MelissaData/RightFielderObject-Dotnet
-cd RightFielderObject-Dotnet
+git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/net/melissadatarightfielderobjectwindowsnetexample.git
+cd melissadatarightfielderobjectwindowsnetexample
 ```
 
 #### Set up Melissa Updater 
