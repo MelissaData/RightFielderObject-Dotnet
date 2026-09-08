@@ -24,7 +24,7 @@ And return
 - Result Codes
 
 ## Tested Environments
-- Windows 11 64-bit .NET 8.0, Powershell 5.1
+- Windows 11 64-bit .NET 10.0, Powershell 5.1
 - Melissa data files for 2026-Q3
 
 ## Required File(s) and Programs
@@ -46,9 +46,7 @@ Before starting, make sure that .NET SDK has been correctly installed on your ma
 
 `dotnet --list-sdks`
 
-If .NET SDK is already installed, you should see it in the following list:
-
-![alt text](/screenshots/dotnet_output.png)
+If .NET SDK is already installed, you should see it listed.
 
 To download, follow this link: https://dotnet.microsoft.com/en-us/download/dotnet
 
